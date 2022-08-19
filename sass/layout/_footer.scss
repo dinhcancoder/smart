@@ -1,0 +1,143 @@
+.footer {
+  padding: 30px 0 15px 0;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-logo {
+    @include flex-align;
+    gap: 8px;
+
+    &>ion-icon {
+      font-size: 5.2rem;
+    }
+
+    &>h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  &-text {
+    color: $black;
+    margin: 25px 0;
+    line-height: 1.8;
+  }
+
+  &-icons {
+    @include flex-align;
+    gap: 15px;
+    cursor: pointer;
+  }
+
+  &-icon {
+    @include flex-center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $black;
+    @include borderRadius(3px);
+
+    &>i {
+      font-size: 2.4rem;
+      @include transition;
+
+      &:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(1):hover {
+      color: #3b5998;
+    }
+
+    &:nth-child(2):hover {
+      color: #1da1f2;
+    }
+
+    &:hover:nth-child(3) {
+      color: #ff0000;
+    }
+
+    &:hover:nth-child(4) {
+      color: rgb(255, 33, 70);
+    }
+  }
+
+  &-box {
+    padding: 20px 0 0 25px;
+  }
+
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &-list {
+    padding: 15px 0;
+  }
+
+  &-items:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &-links {
+    color: $black;
+    @include transition;
+
+    &:hover {
+      color: $primary;
+      letter-spacing: .4px;
+    }
+  }
+
+  &-license {
+    padding: 10px 0;
+    background-color: #f7f7f7;
+    border-top: 1px solid rgb(51, 51, 51, .1);
+
+    &>span {
+      display: block;
+      font-size: 1.24rem;
+      text-align: center;
+      color: #7A7A7A;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px;
+    }
+
+    &-box {
+      padding: 0;
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        padding-left: 25px;
+      }
+    }
+  }
+
+  @include sm {
+    &-container {
+      grid-template-columns: 1fr;
+    }
+
+    &-box {
+      padding: 0;
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        padding-left: 0;
+      }
+    }
+  }
+}

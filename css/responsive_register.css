@@ -1,0 +1,45 @@
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+   html {
+      font-size: 62%;
+   }
+
+   .register {
+      grid-template-columns: 100%;
+   }
+
+   .register__image-img {
+      position: relative;
+   }
+
+   .register__image-img img {
+      position: relative;
+      height: 600px;
+      object-position: bottom;
+   }
+}
+
+@media (max-width: 768px) {
+   html {
+      font-size: 60%;
+   }
+}
+
+@media (max-width: 575.98px) {
+   .register__image-img img {
+      position: relative;
+      height: 500px;
+      object-position: bottom;
+   }
+}
+
+@media (max-width: 425px) {
+   html {
+      font-size: 58.8%;
+   }
+
+   .register__image-img img {
+      display: none;
+   }
+}

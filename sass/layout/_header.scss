@@ -1,0 +1,405 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    height: 130px;
+  }
+
+  &-onof {
+    @include flex-align;
+    gap: 15px;
+  }
+
+  &-menu {
+    height: 20px;
+  }
+
+  &-category {
+    font-size: 2rem;
+    color: $white;
+  }
+
+  &-xsmart {
+    @include flex-justify;
+  }
+
+  &-right {
+    @include flex-align;
+    justify-content: end;
+  }
+
+  &-right {
+    gap: 22px;
+  }
+
+  &-account {
+    position: relative;
+    @include flex-align;
+    gap: 10px;
+    cursor: pointer;
+
+    &:hover .account-form,
+    &:hover .logout-form {
+      display: block;
+    }
+  }
+
+  &-avata {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &-name {
+    @include flex-align;
+    gap: 3px;
+    font-size: 1.53rem;
+    color: $white;
+    text-transform: capitalize;
+  }
+
+  &-name a {
+    color: inherit;
+  }
+
+  &-name i {
+    font-size: 2rem;
+  }
+
+  &-cart,
+  &-search {
+    cursor: pointer;
+  }
+
+  &-icons {
+    position: relative;
+
+    &>span {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      width: 280px;
+      background-color: $white;
+      padding: 10px 15px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -20px;
+        right: 0;
+        width: 100%;
+        height: 20px;
+        background-color: transparent;
+        z-index: 9;
+      }
+    }
+
+    &:hover>span {
+      display: block;
+      cursor: pointer;
+    }
+
+    &:hover .header-searchItems {
+      display: block;
+    }
+  }
+
+  &-searchItems {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    font-size: 1.45rem;
+    width: 240px;
+    height: 38px;
+    background-color: $white;
+    @include borderRadius(30px);
+
+    &>input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      text-indent: 20px;
+      @include borderRadius(30px);
+      @include transition;
+
+      &:focus {
+        letter-spacing: .4px;
+      }
+    }
+
+    &>ion-icon {
+      @include absoluteCenter('top');
+      right: 15px;
+      font-size: 1.8rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -20px;
+      right: 0;
+      width: 100%;
+      height: 20px;
+      background-color: transparent;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: 35% 30% 35%;
+    }
+
+    &-category {
+      font-size: 1.92rem;
+    }
+
+    &-logo {
+      max-width: 150px;
+    }
+  }
+
+  @include md {
+    &-container {
+      height: 88px;
+    }
+
+    &-account {
+      display: none;
+    }
+
+    &-category {
+      display: none;
+    }
+
+    &-logo {
+      max-width: 140px;
+    }
+
+    &-icons>span {
+      width: 240px;
+    }
+  }
+
+  @include sm {
+    &-logo {
+      max-width: 130px;
+    }
+  }
+}
+
+@include md {
+  .header {
+    position: relative;
+    background-color: $primary;
+  }
+}
+
+.nav {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(4, 4, 4, 0.55);
+  z-index: 999;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all .4s ease-in-out;
+
+  &-close {
+    position: absolute;
+    top: 100px;
+    font-size: 3.4rem;
+    color: $white;
+    cursor: pointer;
+    @include transition;
+    z-index: 999;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-list {
+    margin-top: 200px;
+    max-height: 60vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
+
+  &-list::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &-items {
+    position: relative;
+    text-align: center;
+    color: $white;
+    @include transition;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &-items ion-icon {
+    width: 100%;
+    float: left;
+    font-size: 1.48rem;
+    margin-top: -10px;
+  }
+
+  &-links {
+    font-size: 1.8rem;
+    color: inherit;
+    letter-spacing: .2px;
+    line-height: 60px;
+  }
+
+  &-icons {
+    cursor: pointer;
+  }
+
+  @include xl {
+    &-list {
+      margin-top: 130px;
+    }
+  }
+}
+
+.submenu {
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 0;
+  transition: transform .3s ease-in-out,
+    height .3s ease-in-out;
+
+  &-items {
+    position: relative;
+    text-align: center;
+  }
+
+  &-links {
+    color: $text;
+    line-height: 45px;
+    @include transition;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.actice-submenu {
+  padding: 25px 0;
+  transform: scaleY(1);
+  height: 100%;
+}
+
+.actice-nav {
+  transform: scaleY(1);
+}
+
+.account-form {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 200px;
+  background-color: $white;
+  border-radius: 2px;
+  padding: 12px;
+  display: none;
+  box-shadow: 0px 10px 27px 3px rgba(0, 0, 0, 0.05);
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -14px;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    z-index: 99;
+  }
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &-btn {
+    display: block;
+    border: 1px solid $border;
+    font-size: 1.44rem;
+    text-align: center;
+    padding: 6.2px 0;
+    color: $black;
+    border-radius: 30px;
+    @include transition;
+
+    &:nth-child(1) {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+      background-color: transparent;
+    }
+  }
+}
+
+.logout-form {
+  display: none;
+  position: absolute;
+  top: 43px;
+  right: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -18px;
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    z-index: 99;
+  }
+}
+
+.logout {
+  @include flex-center;
+  gap: 4px;
+  color: $black;
+  background-color: $white;
+  width: 120px;
+  border-radius: 4px;
+  padding: 6.2px 0;
+  @include transition;
+
+  &:hover {
+    letter-spacing: .2px;
+  }
+
+  &-exit {
+    color: inherit;
+    font-size: 1.44rem;
+  }
+
+  &-icons {
+    font-size: 1.72rem;
+  }
+}

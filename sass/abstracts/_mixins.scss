@@ -1,0 +1,208 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+$breakpoint: (
+  'xl': 1200px,
+  'lg': 992px,
+  'md': 768px,
+  'sm': 576px,
+  'mb': 474px
+);
+
+@media (min-width: map-get($breakpoint, 'xl')) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: map-get($breakpoint, 'xl')) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: map-get($breakpoint, 'lg')) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: map-get($breakpoint, 'md')) {
+  html {
+    font-size: 60%;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: map-get($breakpoint, 'sm')) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: map-get($breakpoint, 'mb')) {
+  html {
+    font-size: 58.8%;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map-get($breakpoint, 'xl')) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpoint, 'lg')) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoint, 'md')) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpoint, 'sm')) {
+    @content;
+  }
+}
+
+@mixin mb {
+  @media (max-width: map-get($breakpoint, 'mb')) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-spaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin transition {
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+@mixin transitionTime($time) {
+  transition: all $time ease-in-out;
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+}
+
+@mixin borderRadius($value) {
+  border-radius: $value;
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  -o-border-radius: $value;
+}
+
+@mixin relativeCenter($direction: 'left') {
+  position: relative;
+
+  @if $direction =="left" {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  @if $direction =='top' {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  @if $direction =='both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+}
+
+@mixin absoluteCenter($direction: 'left') {
+  position: absolute;
+
+  @if $direction =='left' {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  @if $direction =='top' {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  @if $direction =='both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+}
+
+@mixin borderValue($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+  -webkit-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+  -moz-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+  -ms-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+  -o-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}

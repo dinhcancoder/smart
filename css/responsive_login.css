@@ -1,0 +1,48 @@
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+   html {
+      font-size: 62%;
+   }
+
+   .login {
+      grid-template-columns: 100%;
+      margin: 40px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   html {
+      font-size: 60%;
+   }
+}
+
+@media (max-width: 575.98px) {
+   .login__form {
+      padding: 35px;
+   }
+}
+
+@media (max-width: 425px) {
+   html {
+      font-size: 58.8%;
+   }
+
+   .login {
+      grid-template-columns: 100%;
+      margin: 10px 0;
+   }
+
+   .login__form {
+      padding: 15px;
+   }
+
+   .login__img {
+      display: none;
+   }
+
+   .setting {
+      top: 78px;
+      transform: translateY(0);
+   }
+}

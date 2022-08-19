@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> News </title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <div class="header header-all">
+    <div class="container">
+      <div class="header-container">
+        <div class="header-nav">
+          <a href="#" class="header-onof" onclick="nav()">
+            <img src="./assets/img/menu-bar.jpg" class="header-menu">
+            <span href="#" class="header-category">Danh mục</span>
+          </a>
+          <!-- navbar -->
+          <div class="nav">
+            <div class="container">
+              <i class='bx bx-x nav-close' onclick="nav()"></i>
+              <ul class="nav-list">
+                <li class="nav-items"><a href="#" class="nav-links">Trang chủ</a></li>
+                <li class="nav-items">
+                  <a href="#!" class="nav-links">Sản phẩm</a>
+                  <ion-icon name="chevron-down-outline" class="nav-icons" onclick="submenu()"></ion-icon>
+                  <ul class="submenu">
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Sản phẩm nổi bật</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Apple Watch</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Samsung Gear</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Xiomi SmartWatch</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Sản phẩm khuyến mãi</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-items"><a href="#" class="nav-links">Tin tức</a></li>
+                <li class="nav-items"><a href="#" class="nav-links">Giới thiệu</a></li>
+                <li class="nav-items"><a href="#" class="nav-links">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-xsmart">
+          <a href="index.html"><img src="./assets/img/logo-black.jpg" class="header-logo"></a>
+          <a href="index.html"><img src="./assets/img/logo.png" class="header-logo"></a>
+        </div>
+        <div class="header-right">
+          <div class="header-account">
+            <img src="./assets/img/avata.jpg" class="header-avata">
+            <span class="header-name"><a href="#">Tài khoản</a> <i class='bx bx-chevron-down'></i></span>
+            <!-- account form -->
+            <div class="account-form">
+              <div class="account">
+                <a href="login.html" class="account-btn">Đăng nhập</a>
+                <a href="register.html" class="account-btn">Đăng ký</a>
+              </div>
+            </div>
+            <!-- logout form -->
+            <div class="logout-form">
+              <div class="logout" onclick="logout()">
+                <a href="#" class="logout-exit">Đăng xuất</a>
+                <ion-icon name="log-out-outline" class="logout-icons"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="header-icons">
+            <a href="cart.html"><img src="./assets/img/cart.jpg" class="header-cart"></a>
+            <span>Không có sản phẩm nào.</span>
+          </div>
+          <div class="header-icons">
+            <img src="./assets/img/search.jpg" class="header-search">
+            <div class="header-searchItems">
+              <input type="text" placeholder="Tìm kiếm">
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- break -->
+  <div class="break">
+    <div class="container">
+      <div class="break-page">
+        <a href="index.html">Trang chủ</a>
+        <a href="#">/</a>
+        <a href="#!">Tin tức</a>
+        <a href="#!">/</a>
+        <a href="#!">Chi tiết SmartWatch mới nhất</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- news -->
+  <div class="news">
+    <div class="container">
+      <div class="news-container">
+        <p class="news-post">Tin tức</p>
+        <p class="news-text">Đầu tiên, việc cải tiến và tạo nên thiết bị mới là cả một cuộc cách mạng về công nghệ.
+          Smart Watch ra đời nhằm hỗ trợ
+          tối đa cho thao tác hằng ngày, chẳng hạn bạn có thể trả lời/ từ chối cuộc gọi, điều khiển trình nghe nhạc, xem
+          ảnh, kiểm
+          tra % pin smartphone, xem thông báo.....
+        </p>
+        <div class="news-box">
+          <div class="news-left">
+            <div class="news-leftImg">
+              <img src="./assets/img/postImg2.jpg" alt="">
+            </div>
+            <h1 class="news-title">Chi tiết smartwatch mới nhất của Samsung</h1>
+            <span class="news-postDate">
+              <span>0&nbsp; Bình luận</span>&nbsp;|&nbsp;<span>18/10/2018</span>
+            </span>
+            <div class="news-leftText">
+              <p><b>Samsung gear sport</b>&nbsp;thiết bị đeo tay theo dõi sức khỏe mới nhất vừa được hãng công nghệ nổi
+                tiếng Hàn
+                Quốc giới thiệu với người dùng. Hôm nay minmobile sẽ có bài viết đánh giá chi tiết sản phẩm Samsung gear
+                sport về
+                thiết kế kiểu dáng, tính năng, và những khả năng hoạt động của thiết bị này nhằm mục đích cung cấp cho
+                các bạn những
+                thông tin hữu ích nhất cũng như có cái nhìn tổng quan để chọn cho mình một sản phẩm đeo tay thông minh
+                sắp tới.<br>
+                <br>
+                <b>Thiết kế của Samsung gear sport.</b><br>
+                <br>
+                Minmobile cùng các bạn mở hộp Samsung gear sport nhé. Chúng ta có một hộp đựng sản phẩm khá đơn giản,
+                không giống
+                như những dòng gear S2 hoặc S3, hộp gear sport vuông vức. bên trong hộp chúng ta có gear sport, dock
+                sạc, củ sạc và
+                một dây thay thế ( đáng tiếc là Samsung chỉ tặng kèm dây thay thế 1 bên, thiết nghĩ dây này không có tác
+                dụng gì lắm
+                vì người dùng chúng ta cần 1 bộ dây hơn là 1 phần dây ). Phụ kiện không có gì đặc biệt trong hộp sản
+                phẩm này.
+              </p>
+              <p style="text-align: center;"><iframe allow="autoplay; encrypted-media" allowfullscreen=""
+                  src="https://www.youtube.com/embed/bTirQeS875M" class="news-video" frameborder="0"></iframe></p>
+              <p>​</p>
+              <p>Nhân vật chính của chúng ta Samsung Gear Sport. Thoạt nhìn người dùng sẽ liên tưởng ngay đến một sản
+                phẩm của cùng
+                nhà sản xuất Samsung, đó chính xác là gear s3. Những đường nét kiểu dáng và ngay cả vòng bezel cũng
+                không khác gì so
+                với gear s3, nếu có điểm gì khác để phân biệt thì có lẽ là kích thước. gear sport có kích thước nhỏ hơn
+                và cũng nhẹ
+                hơn.</p>
+            </div>
+            <div class="news-comment">
+              <h5 class="news-commentTitle">Bình luận của bạn</h5>
+              <div class="news-commentBtn">
+                <input type="text" placeholder="Họ và tên">
+                <input type="text" placeholder="Email & Số điện thoại">
+              </div>
+              <div class="news-commentContent">
+                <textarea id="news-textarea"
+                  style="width: 100%;height: 200px;border: 1px solid #EAEBF3;border-radius: 25px; margin-top: 18px;"></textarea>
+              </div>
+              <button class="news-commentSubmit">Gửi bình luận</button>
+            </div>
+          </div>
+          <div class="news-right">
+            <div class="news-rightPost">
+              <div class="news-rightImg">
+                <img src="./assets/img/postImg1.jpg" alt="">
+              </div>
+              <div>
+                <a href="news.html" class="news-rightName">Mở hộp Apple Watch Series 4</a>
+                <div class="news-postDate">
+                  <span>0&nbsp; Bình luận</span>&nbsp;|&nbsp;<span>18/10/2018</span>
+                </div>
+              </div>
+            </div>
+            <div class="news-rightPost">
+              <div class="news-rightImg">
+                <img src="./assets/img/postImg3.jpg" alt="">
+              </div>
+              <div>
+                <a href="news.html" class="news-rightName">Chi tiết smartwatch mới nhất của Samsung</a>
+                <div class="news-postDate">
+                  <span>0&nbsp; Bình luận</span>&nbsp;|&nbsp;<span>18/10/2018</span>
+                </div>
+              </div>
+            </div>
+            <div class="news-rightPost">
+              <div class="news-rightImg">
+                <img src="./assets/img/postImg2.jpg" alt="">
+              </div>
+              <div>
+                <a href="news.html" class="news-rightName">Trên tay smartwatch Xiaomi Amazfit Bip</a>
+                <div class="news-postDate">
+                  <span>0&nbsp; Bình luận</span>&nbsp;|&nbsp;<span>18/10/2018</span>
+                </div>
+              </div>
+            </div>
+            <div class="news-rightPost">
+              <div class="news-rightImg">
+                <img src="./assets/img/postImg2.jpg" alt="">
+              </div>
+              <div>
+                <a href="news.html" class="news-rightName">Trên tay Nokia Steel HR</a>
+                <div class="news-postDate">
+                  <span>0&nbsp; Bình luận</span>&nbsp;|&nbsp;<span>18/10/2018</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  search -->
+  <div class="search cart-search">
+    <div class="container">
+      <div class="search-container">
+        <p class="search-text">Nhận thông tin khuyến mãi mới nhất từ XSMart</p>
+        <div class="search-form">
+          <input type="text" class="search-btn" placeholder="Địa chỉ email">
+          <button class="search-register"><span>Đăng ký</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-smart">
+          <div class="footer-logo">
+            <ion-icon name="watch-outline"></ion-icon>
+            <h2>Smart</h2>
+          </div>
+          <p class="footer-text">Smart là một trong những công ty phân phối đồng hồ lớn nhất trong việc giới thiệu các
+            thương hiệu đồng hồ cao
+            cấp và sang trọng tại Việt Nam.
+          </p>
+          <div class="footer-icons">
+            <div class="footer-icon"><i class='bx bxl-facebook'></i></div>
+            <div class="footer-icon"><i class='bx bxl-twitter'></i></div>
+            <div class="footer-icon"><i class='bx bxl-youtube'></i></div>
+            <div class="footer-icon"><i class='bx bxl-instagram'></i></div>
+          </div>
+        </div>
+        <div class="footer-about footer-box">
+          <h3 class="footer-title">Về SmartWatch</h3>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Trang chủ</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Giới thiệu</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Sản phẩm</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Tin tức</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Bộ sưu tập</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Nổi bậc</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-support footer-box">
+          <h3 class="footer-title">Hỗ trợ khách hàng</h3>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Tư vấn</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Hỗ trợ</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Trả góp</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Khuyến mãi</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Bảo hành</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Đổi trả</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Giao hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-info footer-box">
+          <h3 class="footer-title">Liên hệ với chúng tôi</h3>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Địa chỉ: 17/06 Quế Châu, Quế Sơn, Quảng Nam.
+              </a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Email: canfullstack@fpt.edu.vn
+              </a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Điện thoại: 0373 405 375
+              </a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Zalo: Kan Kan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-license">
+    <span>© Bản quyền thuộc về Can_FrontBack | Vui lòng không copy nhé!</span>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>

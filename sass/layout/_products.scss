@@ -1,0 +1,119 @@
+.product {
+  background-color: #f7f7f7;
+  padding-top: 70px;
+
+  &-title {
+    @extend .title;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $white;
+    padding: 10px 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    &:hover {
+      box-shadow: $boxShadow;
+    }
+
+    &:hover .product-name {
+      color: $primary;
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+      -o-transform: scale(1.02);
+    }
+  }
+
+  &-img {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+  }
+
+  &-name {
+    font-size: 1.44rem;
+    color: $black;
+    @include transition;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &-rate {
+    color: $orange;
+    margin: 4px 0;
+  }
+
+  &-price {
+    @extend .priceSmall;
+  }
+
+  &-banner {
+    position: relative;
+    margin-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  @include lg {
+    &-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include md {
+    &-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-title {
+      font-size: 3rem;
+    }
+
+    &-items {
+      flex-direction: column;
+      padding: 20px 0;
+    }
+  }
+
+  @include sm {
+    &-title {
+      font-size: 2.8rem;
+    }
+
+    &-list {
+      grid-gap: 20px;
+    }
+
+    &-banner {
+      margin-top: 20px;
+      padding-bottom: 35px;
+    }
+  }
+
+  @include mb {
+    &-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-items {
+      flex-direction: row;
+    }
+  }
+}

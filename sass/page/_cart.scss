@@ -1,0 +1,277 @@
+.cart {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+
+  &-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &-box {
+    margin: 20px 0;
+    background-color: $white;
+    border: 1px solid #ebebeb;
+  }
+
+  &-row {
+    display: grid;
+    grid-template-columns: 18% 32% 15% 14% 14% 8%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+
+    &:first-child span:not(:last-child) {
+      border-right: 1px solid #ebebeb;
+    }
+
+    &:first-child>span {
+      font-size: 1.45rem;
+      font-weight: 600;
+      padding: 20px 0;
+    }
+  }
+
+  &-row:not(:first-child) {
+    padding: 20px 0;
+  }
+
+  &-img {
+    @include relativeCenter;
+    max-width: 100px;
+  }
+
+  &-name {
+    color: inherit;
+    @include transition;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &-price {
+    font-size: 1.5rem;
+    color: $primary;
+  }
+
+  &-quantity {
+    @include flex-center;
+    gap: 12px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.4rem;
+
+      ion-icon {
+        cursor: pointer;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &-total {
+    font-size: 1.6rem;
+    color: $primary;
+  }
+
+  &-remove {
+    font-size: 1.8rem;
+    opacity: .6;
+    @include transition;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+      color: $primary;
+    }
+  }
+
+  &-continue {
+    @include flex-spaceBetween;
+
+    a {
+      color: inherit;
+      @include transition;
+
+      &:hover {
+        color: $primary;
+        padding-left: 10px;
+        margin-left: 8px;
+      }
+
+      ion-icon {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+
+  &-subTotal {
+    @include flex-spaceAround;
+    width: 350px;
+    background-color: $white;
+    border: 1px solid #ebebeb;
+    padding: 15px 0;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+
+    span:last-child {
+      color: $primary;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  &-pays {
+    display: flex;
+    justify-content: end;
+  }
+
+  &-pay {
+    @include flex-align;
+    gap: 12px;
+    background-color: $primary;
+    color: $white;
+    font-size: 1.45rem;
+    @include borderRadius(32px);
+    border: 1px solid $primary;
+    padding: 15px 40px;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: $white;
+      color: $primary;
+      border-color: $primary;
+    }
+
+    ion-icon {
+      font-size: 1.8rem;
+    }
+  }
+
+  &-search {
+    padding-top: 40px;
+  }
+}
+
+.cartMobile {
+  display: none;
+}
+
+@include lg {
+  .cart {
+    display: none;
+  }
+
+  .cartMobile {
+    display: block;
+  }
+
+  .cartMobile {
+    padding: 50px 0;
+    background-color: #f7f7f7;
+  }
+
+  .cart-row {
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
+
+  .cartMobile-left {
+    @include flex-align;
+    gap: 18px;
+
+    img {
+      width: 85px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    p span {
+      color: $primary;
+    }
+  }
+
+  .cartMobile-quantity {
+    @include flex-center;
+    gap: 15px;
+    margin-bottom: 10px;
+
+    ion-icon {
+      @include transition;
+
+      &:hover {
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cartMobile-right {
+    span {
+      @include transition;
+
+      &:hover {
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cartMobile-subtotal {
+    margin-top: 20px;
+
+    p {
+      font-size: 1.72rem;
+      font-weight: 500;
+
+      span {
+        font-weight: 700;
+        color: $primary;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .cartMobile-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px 0;
+    font-size: 1.5rem;
+    background-color: $white;
+    border: solid 1px #ebebeb;
+    cursor: pointer;
+  }
+
+  .cartMobile-pay {
+    color: $white;
+    background-color: $primary;
+  }
+
+  .cartMobile-continue {
+    @include transition;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+      opacity: .8;
+    }
+  }
+}
+
+@include mb {
+  .cartMobile-left img {
+    width: 70px;
+  }
+}

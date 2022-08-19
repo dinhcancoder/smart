@@ -1,0 +1,280 @@
+body {
+   background-color: #0d1a2e;
+}
+
+.form {
+   padding: 40px 0;
+}
+
+.register {
+   display: grid;
+   grid-template-columns: 58% 42%;
+   width: 100%;
+   min-height: 640px;
+   border-radius: 5px;
+   box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+   overflow: hidden;
+}
+
+.register__image {
+   position: relative;
+}
+
+.register__image-img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+
+.register__image-img img {
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.register__image-img::before {
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+   opacity: .64;
+   z-index: 1;
+}
+
+/* register form */
+.register__form {
+   color: var(--white-color);
+   background-color: #0d1a2e;
+   padding: 25px;
+}
+
+.register__form-title h1 {
+   text-align: center;
+   font-size: 2.8rem;
+   font-weight: 700;
+   padding: 10px 0;
+   letter-spacing: 1.2px;
+}
+
+.register__form-btn {
+   margin: 25px 0;
+}
+
+.btn__input-title {
+   font-size: 1.2rem;
+   color: var(--text-register);
+   letter-spacing: .4px;
+}
+
+.btn__input:not(:nth-child(1)) .btn__input-title {
+   margin-top: 15px;
+}
+
+.btn__input-box {
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding: 15px 0;
+   color: var(--text-register);
+}
+
+.btn__input-box input {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   color: var(--white-color);
+   background-color: transparent;
+   text-indent: 28px;
+   letter-spacing: .2px;
+   border-bottom: 1px solid #253143;
+   transition: all .3s ease-in-out;
+}
+
+.btn__input-box ion-icon {
+   font-size: 1.8rem;
+}
+
+.btn__input-box input:focus {
+   font-size: 1.48rem;
+   border-color: #425be4;
+   letter-spacing: .6px;
+}
+
+.btn__input:focus-within .btn__input-title label {
+   color: #425be4;
+}
+
+/* error */
+.error,
+.emailfail,
+.usernamefail,
+.passwordfail {
+   color: rgb(255, 70, 70);
+   font-size: 1.35rem;
+   letter-spacing: .5px;
+   margin-top: 4px;
+}
+
+.success,
+.close {
+   position: absolute;
+   right: 0;
+   display: none;
+}
+
+.success {
+   color: rgb(29, 225, 49);
+}
+
+.close {
+   color: red;
+}
+
+/* accept */
+.accept {
+   position: relative;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.accept label {
+   position: relative;
+   margin-top: 4px;
+   cursor: pointer;
+}
+
+.accept input[type="checkbox"] {
+   position: relative;
+   width: 15px;
+   height: 15px;
+   appearance: none;
+   -webkit-appearance: none;
+   border: 1px solid rgb(82, 82, 82);
+   border-radius: 2px;
+   transition: all .2s ease-in-out;
+   cursor: pointer;
+}
+
+.accept ion-icon {
+   position: absolute;
+   left: .5px;
+   top: 1px;
+   display: none;
+}
+
+.accept input[type="checkbox"]:checked {
+   background-color: #425be4;
+   border-color: #425be4;
+   border-radius: 4px;
+}
+
+.accept input[type="checkbox"]:checked~ion-icon {
+   display: block;
+}
+
+.accept p {
+   color: var(--white-color);
+   font-size: 1.38rem;
+   letter-spacing: .2px;
+}
+
+.accept p a {
+   color: hsl(231, 100%, 59%);
+}
+
+.confirm {
+   position: absolute;
+   right: 0;
+   font-size: 1.35rem;
+   color: rgb(255, 59, 59);
+   letter-spacing: .4px;
+   display: none;
+}
+
+.submit {
+   display: block;
+   margin: 28px 0;
+}
+
+#submit {
+   padding: 12px 0;
+   width: 100%;
+   border-radius: 3px;
+   background-color: rgba(66, 91, 228, .85);
+   color: var(--white-color);
+   font-size: 1.48rem;
+   font-weight: 500;
+   letter-spacing: .4px;
+   cursor: pointer;
+   transition: background-color .2s ease-in-out;
+}
+
+#submit:hover {
+   background-color: #4561ff;
+}
+
+.continue {
+   display: block;
+}
+
+.continue p {
+   text-align: center;
+   color: var(--text-register);
+   font-weight: 500;
+   letter-spacing: .2px;
+}
+
+.login__icons {
+   display: flex;
+   justify-content: space-between;
+   gap: 15px;
+   margin: 20px 0;
+}
+
+.login__icons-box {
+   width: 100%;
+   padding: 10px 0;
+   border: 1px solid #3d4757;
+   border-radius: 20px;
+   gap: 12px;
+   cursor: pointer;
+   background-color: transparent;
+   transition: all .2s ease-in-out
+}
+
+.login__icons-box ion-icon {
+   font-size: 1.8rem;
+}
+
+.login__icons-box span {
+   font-weight: 500;
+   letter-spacing: .2px;
+}
+
+.login__icons-box:hover:nth-child(1) {
+   background-color: #3b5998 !important;
+}
+
+.login__icons-box:hover:nth-child(2) {
+   background-color: #e6162d !important;
+}
+
+.login__signin p {
+   text-align: center;
+   letter-spacing: .5px;
+}
+
+.login__signin p a {
+   color: #3270ff;
+   font-size: 1.52rem;
+   margin-left: 4px;
+}

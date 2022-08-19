@@ -1,0 +1,128 @@
+.search {
+  color: $white;
+  margin-bottom: 20px;
+
+  &-container {
+    @include flex-spaceAround;
+    gap: 20px;
+    padding: 40px 0;
+    background-image: -webkit-linear-gradient(0deg, #0fd186 0%, #35d899 100%);
+    @include borderValue(72px, 0, 72px, 0);
+  }
+
+  &-text {
+    font-size: 1.68rem;
+    font-weight: 600;
+  }
+
+  &-form {
+    &>input {
+      border: none;
+      outline: none;
+      text-indent: 20px;
+      width: 380px;
+      height: 40px;
+      @include borderRadius(30px);
+      @include transition;
+
+      &:focus {
+        padding-left: 10px;
+      }
+    }
+
+    &>button {
+      position: relative;
+      border: none;
+      height: 40px;
+      width: 120px;
+      @include borderRadius(30px);
+      background-color: transparent;
+      color: $white;
+      border: 2px solid $white;
+      cursor: pointer;
+      margin-left: 10px;
+
+      &>span {
+        position: relative;
+        z-index: 2;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        background-color: rgba(0, 0, 0, .05);
+        @include borderRadius(30px);
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transition: transform .5s ease-in-out;
+        -webkit-transition: transform .5s ease-in-out;
+        -moz-transition: transform .5s ease-in-out;
+        -ms-transition: transform .5s ease-in-out;
+        -o-transition: transform .5s ease-in-out;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+      }
+    }
+  }
+
+  @include lg {
+    &-container {
+      flex-direction: column;
+    }
+
+    &-form {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+
+      &>input {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  @include md {
+    &-container {
+      padding: 32px;
+    }
+
+    &-form {
+      width: 100%;
+    }
+  }
+
+  @include mb {
+    &-container {
+      padding: 30px 0;
+      @include borderRadius(4px);
+    }
+
+    &-text {
+      padding: 0 10px;
+      text-align: center;
+      line-height: 1.72;
+    }
+
+    &-form {
+      padding: 0 15px;
+
+      &>input {
+        height: 35px;
+      }
+
+      &>button {
+        height: 35px;
+      }
+    }
+  }
+}

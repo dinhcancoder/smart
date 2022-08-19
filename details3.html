@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Detail </title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <div class="header header-detail">
+    <div class="container">
+      <div class="header-container">
+        <div class="header-nav">
+          <a href="#" class="header-onof" onclick="nav()">
+            <img src="./assets/img/menu-bar.jpg" class="header-menu header-menuDetail">
+            <span href="#" class="header-category header-categoryDetail">Danh mục</span>
+          </a>
+          <!-- navbar -->
+          <div class="nav">
+            <div class="container">
+              <i class='bx bx-x nav-close' onclick="nav()"></i>
+              <ul class="nav-list">
+                <li class="nav-items"><a href="#" class="nav-links">Trang chủ</a></li>
+                <li class="nav-items">
+                  <a href="#" class="nav-links">Sản phẩm</a>
+                  <ion-icon name="chevron-down-outline" class="nav-icons" onclick="submenu()"></ion-icon>
+                  <ul class="submenu">
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Sản phẩm nổi bật</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Apple Watch</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Samsung Gear</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Xiomi SmartWatch</a>
+                    </li>
+                    <li class="submenu-items">
+                      <a href="#" class="submenu-links">Sản phẩm khuyến mãi</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-items"><a href="#" class="nav-links">Tin tức</a></li>
+                <li class="nav-items"><a href="#" class="nav-links">Giới thiệu</a></li>
+                <li class="nav-items"><a href="#" class="nav-links">Liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-xsmart">
+          <a href="index.html"><img src="./assets/img/logo-black.jpg" class="header-logo"></a>
+        </div>
+        <div class="header-right">
+          <div class="header-account">
+            <img src="./assets/img/avata.jpg" class="header-avata">
+            <span class="header-name header-nameDetai">
+              <a href="#">Tài khoản</a> <i class='bx bx-chevron-down'></i>
+            </span>
+            <!-- account form -->
+            <div class="account-form">
+              <div class="account">
+                <a href="login.html" class="account-btn">Đăng nhập</a>
+                <a href="register.html" class="account-btn">Đăng ký</a>
+              </div>
+            </div>
+            <!-- logout form -->
+            <div class="logout-form">
+              <div class="logout logoutDetail" onclick="logout()">
+                <a href="#" class="logout-exit">Đăng xuất</a>
+                <ion-icon name="log-out-outline" class="logout-icons"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="header-icons header-iconsDetail">
+            <a href="cart.html"><img src="./assets/img/cart.jpg" class="header-cart"></a>
+            <span>Không có sản phẩm nào.</span>
+          </div>
+          <div class="header-icons header-iconsDetail">
+            <img src="./assets/img/search.jpg" class="header-search">
+            <div class="header-searchItems">
+              <input type="text" placeholder="Tìm kiếm">
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- detail main -->
+  <div class="detail">
+    <div class="detail-locationBorder">
+      <div class="container">
+        <div class="detail-location">
+          <span><a href="index.html">Trang chủ</a></span>
+          <span>/</span>
+          <span>SmartWatch</span>
+          <span>/</span>
+          <span>Apple Watch Series 4</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- detail product -->
+      <div class="detail-product">
+        <div class="detail-image">
+          <div class="detail-slider">
+            <img src="./assets/img/slider9.jpg" class="detailImgSmall" alt="">
+            <img src="./assets/img/slider2.jpg" class="detailImgSmall" alt="">
+            <img src="./assets/img/slider3.jpg" class="detailImgSmall" alt="">
+            <img src="./assets/img/slider5.jpg" class="detailImgSmall" alt="">
+          </div>
+          <div class="detail-imageMain">
+            <img src="./assets/img/slider9.jpg" class="detailImgBig" alt="">
+          </div>
+        </div>
+        <!-- ** detail right -->
+        <div class="detail-right">
+          <h3 class="detail-name">Apple Watch Series 4</h3>
+          <div class="detail-other">
+            <p>Thương hiệu: <span>Samsung</span></p>
+            <p>|</p>
+            <p>Bảo hành: <span>12 tháng</span></p>
+          </div>
+          <span class="detail-price">7.700.000đ</span>
+          <div class="detail-info">
+            <p>Kích thước màn hình: <span>1.2"</span></p>
+            <p>Độ phân giải màn hình: <span>360 x 360pixels</span></p>
+            <p>Luôn hiển thị: <span>Có</span></p>
+            <p>Loại màn hình: <span>AMOLED</span></p>
+            <p>Multi-touch: <span>Có</span></p>
+            <p>Mật độ điểm ảnh: <span>302ppi</span></p>
+          </div>
+          <div class="detail-color">
+            <span>Màu sắc</span>
+            <div>
+              <img src="./assets/img/slider9.jpg" alt="">
+              <img src="./assets/img/slider5.jpg" alt="">
+            </div>
+          </div>
+          <div class="detail-quantity">
+            <span>Số lượng: </span>
+            <div>
+              <ion-icon name="remove-outline" onclick="viewRemove(this)"></ion-icon>
+              <span>1</span>
+              <ion-icon name="add-outline" onclick="viewAdd(this)"></ion-icon>
+            </div>
+          </div>
+          <button class="detail-add">
+            <img src="./assets/img/cart.jpg" alt="">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- service -->
+  <div class="service service-detail">
+    <div class="container">
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper service-list">
+          <div class="swiper-slide service-items">
+            <img src="./assets/img/i1.jpg" class="service-img">
+            <span class="service-name">Sản phẩm chính hãng</span>
+          </div>
+          <div class="swiper-slide service-items">
+            <img src="./assets/img/i2.jpg" class="service-img">
+            <span class="service-name">Giao hàng tận nơi</span>
+          </div>
+          <div class="swiper-slide service-items">
+            <img src="./assets/img/i3.jpg" class="service-img">
+            <span class="service-name">Thanh toán tại nhà</span>
+          </div>
+          <div class="swiper-slide service-items">
+            <img src="./assets/img/i4.jpg" class="service-img">
+            <span class="service-name">Bảo hình chính hãng</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- detail review -->
+  <div class="detail detailReview">
+    <div class="container">
+      <div class="detail-review">
+        <h3 class="detail-title">Thông tin sản phẩm</h3>
+        <div class="detail-reviewText">
+          <p class="detail-text">Kích thước màn hình: <span>1.2"</span></p>
+          <p class="detail-text">Độ phân giải màn hình: <span>360 x 360pixels</span></p>
+          <p class="detail-text">Luôn hiển thị: <span>Có</span></p>
+          <p class="detail-text">Loại màn hình: <span>AMOLED</span></p>
+          <p class="detail-text">Multi-touch: <span>Có</span></p>
+          <p class="detail-text">Mật độ điểm ảnh: <span>302ppi</span></p>
+        </div>
+      </div>
+      <div class="detail-review">
+        <h3 class="detail-title">Mô tả sản phẩm</h3>
+        <div class="detail-reviewText">
+          <p>Được giới thiệu không lâu, chiếc đồng hồ thông minh Gear 2 của Samsung đang làm cuồng các tín đồ công nghệ
+            về sự bổ sung
+            hoàn hảo từ thiết kế đến tính năng sản phẩm, khác với sản phảm Samsung Gear 2 tiền nhiệm.
+          </p>
+          <p
+            style="display: inline-block; max-width: 480px; position: relative; left: 50%; transform: translateX(-50%);">
+            <img src="./assets/img/slider9.jpg" class="detailImg">
+          </p>
+          <p>Một sự trọn vẹn đầy đủ của thiết kế đồng hồ thông minh mặt tròn làm cho Gear S2 đậm chất đồng hồ truyền
+            thống.Gear S có
+            nhiều phong cách và phiên bản gần đây nhất với màu xám cá tính, sporty, khỏe mạnh, năng động và không kém
+            phần sang
+            trọng. Phù hợp hầu hết người dùng cho cả nam và nữ.
+          </p>
+          <p>Điểm nhấn từ thao tác xoay mặt đồng hồ, tạo ra tính năng thay đổi tùy biến ở mặt đồng hồ và dây đeo thời
+            trang giúp bạn
+            tự do thể hiện đẳng cấp cá tính.
+          </p>
+          <p><strong>Cấu hình sinh động hữu ích chiếc đồng hồ thông minh Gear S2</strong></p>
+          <p>Gear S2 có màn hình rộng 1.2 inch, độ phân giải 360 x 360 pixel với cảm biến ánh sáng giúp người dùng có
+            thể xem được
+            thông báo ở nhiều môi trường khác nhau. Màn hình được bảo vệ kính cường lực Gorilla Glass, đồng thời có khả
+            năng cảm
+            nhận lực bấm mạnh.Thân đồng hồ làm từ thép không rỉ và có khả năng chống nước theo chuần IP68
+          </p>
+          <p>Về mặt hiệu suất, chiếc đồng hồ thông minh này được tích hợp vi xử lý lõi kép tốc độ 1 GHz. RAM 512 MB, bộ
+            nhớ trong
+            4GB.Mic của đồng hồ cũng có chức năng ghi âm, nhận dạng giọng nói và điện thoại, được hỗ trợ các kết nối phổ
+            biến hiện
+            nay như Wifi, Bluetooth 4.1 và cả NFC.
+          </p>
+          <p><strong>Mua sắm đồng hồ Samsung Gear S2 giá tốt tại Việt Nam</strong></p>
+          <p>Những điểm cộng từ cải tiến tính năng trên Gear S2 mang lại độ tiện dụng như sau:</p>
+          <ul>
+            <li>Kết nối với nhiều điện thoại khác chạy hệ điều hành Android 4.4 KitKat, RAM ít nhất 1.5 BG</li>
+            <li>Có thể tải về các ứng dụng và cài đặt sử dụng thêm</li>
+            <li>Khả năng chống nước, chống bụi đạt tiêu chuẩn IP68</li>
+            <li>Chăm sóc sức khỏe dễ dàng hơn</li>
+            <li>Dung lượng của chiếc đồng hồ thông minh này có thể chứa đến 300 bài hát được đồng bộ từ điện thoại, bạn
+              chỉ cần tai nghe
+              bluetooth lever U có thể nghe nhạc mọi lúc, kể cả không có điện thoại bên cạnh.
+            </li>
+            <li>Nổi bật hơn Gear 2, Gear S2 có sạc không dây và chế độ tiết kiệm điện năng khi không dùng đến.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div class=" hero">
+    <div class="container">
+      <h1 class="hero-title hero-titleDetail">Sản phẩm khác</h1>
+      <div class="hero-box hero-detail">
+        <div class="hero-items">
+          <img src="./assets/img/heorSmartBig1.jpg" class="hero-imgBig">
+        </div>
+        <div class="hero-items">
+          <div class="hero-boxImg">
+            <img src="./assets/img/slider1.jpg" class="hero-img">
+            <div class="hero-input">
+              <a href="details.html" class="hero-btn">Tùy chọn</a>
+              <a href="#!" class="hero-btn" onclick="view(this)">Xem nhanh</a>
+              <div class="view">
+                <div class="container">
+                  <div class="view-container">
+                    <ion-icon name="close-outline" class="view-close" onclick="viewClose(this)"></ion-icon>
+                    <div class="view-img">
+                      <div class="view-imgMain">
+                        <img src="./assets/img/slider1.jpg" alt="">
+                      </div>
+                      <div class="view-slider">
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider1.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider2.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider3.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider5.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="view-detail">
+                      <h2 class="view-title">Samsung Gear S2</h2>
+                      <div class="view-other">
+                        <span>Thương hiệu: <p>Samsung</p> </span>
+                        <span>|</span>
+                        <span>Bảo hành: <p>12 tháng </p></span>
+                      </div>
+                      <span class="view-price">6.500.000đ</span>
+                      <div class="view-info">
+                        <p><span>Kích thước màn hình: </span> 1.2"</p>
+                        <p><span>Độ phân giải màn hình: </span> 360 x 360pixels</p>
+                        <p><span>Luôn hiển thị: </span> Có</p>
+                        <p><span>Loại màn hình: </span> AMOLED</p>
+                        <p><span>Multi-touch: </span> Có</p>
+                        <p><span>Mật độ điểm ảnh: </span> 302ppi</p>
+                      </div>
+                      <div class="view-color">
+                        <span>Màu sắc: </span>
+                        <div>
+                          <img src="./assets/img/slider1.jpg" alt="">
+                          <img src="./assets/img/slider2.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="view-add">
+                        <div class="view-quantity">
+                          <ion-icon name="remove-outline" onclick="viewRemove(this)"></ion-icon>
+                          <span>1</span>
+                          <ion-icon name="add-outline" onclick="viewAdd(this)"></ion-icon>
+                        </div>
+                        <button class="view-btn">Thêm vào giỏ hàng</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider">
+            <img src="./assets/img/slider1.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider2.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider3.jpg" class="hero-imgSlider">
+          </div>
+          <h3 class="hero-name"><a href="details.html">Samsung Gear S2</a></h3>
+          <span class="hero-price">6.500.000đ</span>
+        </div>
+        <div class="hero-items">
+          <div class="hero-boxImg">
+            <img src="./assets/img/slider5.jpg" class="hero-img">
+            <div class="hero-input">
+              <a href="details2.html" class="hero-btn">Tùy chọn</a>
+              <a href="#!" class="hero-btn" onclick="view(this)">Xem nhanh</a>
+              <div class="view">
+                <div class="container">
+                  <div class="view-container">
+                    <ion-icon name="close-outline" class="view-close" onclick="viewClose(this)"></ion-icon>
+                    <div class="view-img">
+                      <div class="view-imgMain">
+                        <img src="./assets/img/slider5.jpg" alt="">
+                      </div>
+                      <div class="view-slider">
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider5.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider1.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider3.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider2.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="view-detail">
+                      <h2 class="view-title">Xiaomi Amazfit Pace</h2>
+                      <div class="view-other">
+                        <span>Thương hiệu: <p>Samsung</p> </span>
+                        <span>|</span>
+                        <span>Bảo hành: <p>12 tháng </p></span>
+                      </div>
+                      <span class="view-price">6.800.000đ</span>
+                      <div class="view-info">
+                        <p><span>Kích thước màn hình: </span> 1.2"</p>
+                        <p><span>Độ phân giải màn hình: </span> 360 x 360pixels</p>
+                        <p><span>Luôn hiển thị: </span> Có</p>
+                        <p><span>Loại màn hình: </span> AMOLED</p>
+                        <p><span>Multi-touch: </span> Có</p>
+                        <p><span>Mật độ điểm ảnh: </span> 302ppi</p>
+                      </div>
+                      <div class="view-color">
+                        <span>Màu sắc: </span>
+                        <div>
+                          <img src="./assets/img/slider1.jpg" alt="">
+                          <img src="./assets/img/slider2.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="view-add">
+                        <div class="view-quantity">
+                          <ion-icon name="remove-outline" onclick="viewRemove(this)"></ion-icon>
+                          <span>1</span>
+                          <ion-icon name="add-outline" onclick="viewAdd(this)"></ion-icon>
+                        </div>
+                        <button class="view-btn">Thêm vào giỏ hàng</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider">
+            <img src="./assets/img/slider5.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider8.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider4.jpg" class="hero-imgSlider">
+          </div>
+          <h3 class="hero-name"><a href="details2.html">Xiaomi Amazfit Pace</a></h3>
+          <span class="hero-price">6.800.000đ</span>
+        </div>
+        <div class="hero-items">
+          <div class="hero-boxImg">
+            <img src="./assets/img/slider9.jpg" class="hero-img">
+            <div class="hero-input">
+              <a href="details3.html" class="hero-btn">Tùy chọn</a>
+              <a href="#!" class="hero-btn" onclick="view(this)">Xem nhanh</a>
+              <div class="view">
+                <div class="container">
+                  <div class="view-container">
+                    <ion-icon name="close-outline" class="view-close" onclick="viewClose(this)"></ion-icon>
+                    <div class="view-img">
+                      <div class="view-imgMain">
+                        <img src="./assets/img/slider9.jpg" alt="">
+                      </div>
+                      <div class="view-slider">
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider9.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider1.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider2.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider5.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="view-detail">
+                      <h2 class="view-title">Apple Watch Series 4</h2>
+                      <div class="view-other">
+                        <span>Thương hiệu: <p>Samsung</p> </span>
+                        <span>|</span>
+                        <span>Bảo hành: <p>12 tháng </p></span>
+                      </div>
+                      <span class="view-price">7.700.000đ</span>
+                      <div class="view-info">
+                        <p><span>Kích thước màn hình: </span> 1.2"</p>
+                        <p><span>Độ phân giải màn hình: </span> 360 x 360pixels</p>
+                        <p><span>Luôn hiển thị: </span> Có</p>
+                        <p><span>Loại màn hình: </span> AMOLED</p>
+                        <p><span>Multi-touch: </span> Có</p>
+                        <p><span>Mật độ điểm ảnh: </span> 302ppi</p>
+                      </div>
+                      <div class="view-color">
+                        <span>Màu sắc: </span>
+                        <div>
+                          <img src="./assets/img/slider9.jpg" alt="">
+                          <img src="./assets/img/slider5.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="view-add">
+                        <div class="view-quantity">
+                          <ion-icon name="remove-outline" onclick="viewRemove(this)"></ion-icon>
+                          <span>1</span>
+                          <ion-icon name="add-outline" onclick="viewAdd(this)"></ion-icon>
+                        </div>
+                        <button class="view-btn">Thêm vào giỏ hàng</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider">
+            <img src="./assets/img/slider9.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider6.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider7.jpg" class="hero-imgSlider">
+          </div>
+          <h3 class="hero-name"><a href="details3.html">Apple Watch Series 4</a></h3>
+          <span class="hero-price">7.700.000đ</span>
+        </div>
+        <div class="hero-items">
+          <div class="hero-boxImg">
+            <img src="./assets/img/slider7.jpg" class="hero-img">
+            <div class="hero-input">
+              <a href="details4.html" class="hero-btn">Tùy chọn</a>
+              <a href="#!" class="hero-btn" onclick="view(this)">Xem nhanh</a>
+              <div class="view">
+                <div class="container">
+                  <div class="view-container">
+                    <ion-icon name="close-outline" class="view-close" onclick="viewClose(this)"></ion-icon>
+                    <div class="view-img">
+                      <div class="view-imgMain">
+                        <img src="./assets/img/slider7.jpg" alt="">
+                      </div>
+                      <div class="view-slider">
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider7.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider1.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider2.jpg" alt=""></div>
+                        <div onclick="viewBorderColor(this)"><img src="./assets/img/slider3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="view-detail">
+                      <h2 class="view-title">Xiaomi Amazfit Bip</h2>
+                      <div class="view-other">
+                        <span>Thương hiệu: <p>Samsung</p> </span>
+                        <span>|</span>
+                        <span>Bảo hành: <p>12 tháng </p></span>
+                      </div>
+                      <span class="view-price">8.200.000đ</span>
+                      <div class="view-info">
+                        <p><span>Kích thước màn hình: </span> 1.2"</p>
+                        <p><span>Độ phân giải màn hình: </span> 360 x 360pixels</p>
+                        <p><span>Luôn hiển thị: </span> Có</p>
+                        <p><span>Loại màn hình: </span> AMOLED</p>
+                        <p><span>Multi-touch: </span> Có</p>
+                        <p><span>Mật độ điểm ảnh: </span> 302ppi</p>
+                      </div>
+                      <div class="view-color">
+                        <span>Màu sắc: </span>
+                        <div>
+                          <img src="./assets/img/slider7.jpg" alt="">
+                          <img src="./assets/img/slider9.jpg" alt="">
+                        </div>
+                      </div>
+                      <div class="view-add">
+                        <div class="view-quantity">
+                          <ion-icon name="remove-outline" onclick="viewRemove(this)"></ion-icon>
+                          <span>1</span>
+                          <ion-icon name="add-outline" onclick="viewAdd(this)"></ion-icon>
+                        </div>
+                        <button class="view-btn">Thêm vào giỏ hàng</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slider">
+            <img src="./assets/img/slider7.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider1.jpg" class="hero-imgSlider">
+            <img src="./assets/img/slider5.jpg" class="hero-imgSlider">
+          </div>
+          <h3 class="hero-name"><a href="details4.html">Xiaomi Amazfit Bip</a></h3>
+          <span class="hero-price">8.200.000đ</span>
+        </div>
+        <div class="hero-items">
+          <img src="./assets/img/heorSmartBig2.jpg" class="hero-imgBig">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- product -->
+  <div class="product product-detail">
+    <div class="container">
+      <div class="bg-title">
+        <h1 class="product-title product-titleDetail">Sản phẩm đã xem</h1>
+      </div>
+      <div class="product-list">
+        <div class="product-items">
+          <div class="product-img">
+            <img src="./assets/img/product1.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Fitbit Charge HR S4</h4>
+            <div class="product-rate">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+            </div>
+            <p class="product-price">1.760.000đ <span class="priceSale">1.990.000đ</span></p>
+          </div>
+        </div>
+        <div class="product-items">
+          <div class="product-img">
+            <img src="./assets/img/product2.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Nokia Steel HR</h4>
+            <div class="product-rate">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+            </div>
+            <p class="product-price">3.760.000đ <span class="priceSale">4.290.000đ</span></p>
+          </div>
+        </div>
+        <div class="product-items">
+          <div class="product-img">
+            <img src="./assets/img/product3.jpg" alt="">
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Garmin Vivoactive 2S</h4>
+            <div class="product-rate">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+            </div>
+            <p class="product-price">3.590.000đ <span class="priceSale">1.990.000đ</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  search -->
+  <div class="search search-detail">
+    <div class="container">
+      <div class="search-container">
+        <p class="search-text">Nhận thông tin khuyến mãi mới nhất từ XSMart</p>
+        <div class="search-form">
+          <input type="text" class="search-btn" placeholder="Địa chỉ email">
+          <button class="search-register"><span>Đăng ký</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-smart">
+          <div class="footer-logo">
+            <ion-icon name="watch-outline"></ion-icon>
+            <h2>Smart</h2>
+          </div>
+          <p class="footer-text">Smart là một trong những công ty phân phối đồng hồ lớn nhất trong việc giới thiệu
+            các
+            thương hiệu đồng hồ cao
+            cấp và sang trọng tại Việt Nam.
+          </p>
+          <div class="footer-icons">
+            <div class="footer-icon"><i class='bx bxl-facebook'></i></div>
+            <div class="footer-icon"><i class='bx bxl-twitter'></i></div>
+            <div class="footer-icon"><i class='bx bxl-youtube'></i></div>
+            <div class="footer-icon"><i class='bx bxl-instagram'></i></div>
+          </div>
+        </div>
+        <div class="footer-about footer-box">
+          <h3 class="footer-title">Về SmartWatch</h3>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Trang chủ</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Giới thiệu</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Sản phẩm</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Tin tức</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Bộ sưu tập</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Nổi bậc</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-support footer-box">
+          <h3 class="footer-title">Hỗ trợ khách hàng</h3>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Tư vấn</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Hỗ trợ</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Trả góp</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Khuyến mãi</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Bảo hành</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Đổi trả</a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">Giao hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-info footer-box">
+          <h3 class="footer-title">Liên hệ với chúng tôi</h3>
+          <ul class="footer-list">
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Địa chỉ: 17/06 Quế Châu, Quế Sơn, Quảng Nam.
+              </a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Email: canfullstack@fpt.edu.vn
+              </a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Điện thoại: 0373 405 375
+              </a>
+            </li>
+            <li class="footer-items">
+              <a href="#!" class="footer-links">
+                Zalo: Kan Kan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-license">
+    <span>© Bản quyền thuộc về Can_FrontBack | Vui lòng không copy nhé!</span>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Login Geavn </title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/baseall.css" />
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/responsive_login.css">
+</head>
+
+<body onload="clear()">
+
+  <div class="login-container">
+    <div class="container">
+      <div class="login">
+        <div class="login__img">
+          <img src="./assets/img/login-bg.jpg" alt="">
+        </div>
+        <div class="login__form">
+          <div class="login__form-title">
+            <h1>Sign In</h1>
+          </div>
+          <div class="login__form-btn">
+            <div class="btn-input">
+              <span>User Name</span>
+              <input type="text" placeholder="Enter User ..." class="input" id="user">
+              <p class="error"></p>
+            </div>
+            <div class="btn-input">
+              <span>Password</span>
+              <input type="password" placeholder="Enter Password ..." class="input" id="password">
+              <p class="error"></p>
+            </div>
+          </div>
+          <div class="login__form-check">
+            <div class="ok">
+              <label for="check">
+                <input type="checkbox" id="check">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                Remember Me
+              </label>
+            </div>
+            <p>Forgot Password?</p>
+          </div>
+          <div class=" login__form-submit">
+            <button class="submit" onclick="login()">Sign In</button>
+          </div>
+          <div class="login__form-other">
+            <p class="p-1"></p>
+            <span>Or with Social Profile</span>
+            <p class="p-2"></p>
+          </div>
+          <div class="login__form-icons">
+            <div class="icon-box">
+              <i class='bx bxl-facebook'></i>
+            </div>
+            <div class="icon-box">
+              <i class='bx bxl-twitter'></i>
+            </div>
+            <div class="icon-box">
+              <i class='bx bxl-google'></i>
+            </div>
+            <div class="icon-box">
+              <i class='bx bxl-instagram'></i>
+            </div>
+          </div>
+          <div class="login__form-register">
+            <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="setting">
+      <div class="setting-content">
+        <p>Change color</p>
+        <div class="setting-icons">
+          <div class="icons-box red" onclick="color(this, 'red')"></div>
+          <div class="icons-box indigo" onclick="color(this, 'indigo')"></div>
+          <div class="icons-box pink" onclick="color(this, 'pink')"></div>
+          <div class="icons-box orange" onclick="color(this, 'orange')"></div>
+          <div class="icons-box yello" onclick="color(this, 'yello')"></div>
+          <div class="icons-box teal" onclick="color(this, 'teal')"></div>
+          <div class="icons-box green" onclick="color(this, 'green')"></div>
+          <div class="reset" onclick="color(this, 'reset')">
+            <ion-icon name="refresh-outline" id="reset"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <i class='bx bx-cog' onclick="login_color()"></i>
+    </div>
+  </div>
+
+  <script type=" module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/register.js"></script>
+  <script src="./js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+  font-family: $font;
+  overflow-x: hidden;
+}
+
+.title {
+  @include relativeCenter;
+  display: inline-block;
+  font-size: 4.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.priceSmall {
+  font-size: 1.6rem;
+  color: $primary;
+  cursor: text;
+}
+
+.priceSale {
+  font-size: 1.44rem;
+  color: $textccc;
+  text-decoration-line: line-through;
+  -moz-text-decoration-line: line-through;
+}
+
+.priceBig {
+  font-size: 2.5rem;
+  color: $primary;
+}
+
+.header-all {
+  position: relative !important;
+  background-color: $white;
+  border-bottom: 1px solid $borderCategory;
+
+  .header-menu,
+  .header-icons {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+
+    @include md {
+      filter: invert(0);
+      -webkit-filter: invert(0);
+    }
+  }
+
+  .header-category,
+  .header-name {
+    color: black;
+  }
+
+  .logout {
+    color: $white;
+    background-color: rgb(255, 121, 72);
+  }
+
+  .header-xsmart {
+    a:nth-child(2) {
+      display: none;
+    }
+
+    @include md {
+      a:nth-child(1) {
+        display: none;
+      }
+
+      a:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+}
+
+.break {
+  padding: 18px 0;
+  background-color: #f7f7f7;
+  border-bottom: $borderColor;
+
+  &-page {
+    display: flex;
+    gap: 15px;
+
+    @include sm {
+      gap: 8px;
+    }
+
+    a {
+      color: $text1;
+
+      &:last-child {
+        color: $primary;
+      }
+
+      &:first-child:hover {
+        color: $primary;
+      }
+    }
+  }
+}

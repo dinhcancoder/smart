@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Register </title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/baseall.css">
+  <link rel="stylesheet" href="./css/register.css">
+  <link rel="stylesheet" href="./css/responsive_register.css">
+</head>
+
+<body onload="clear()">
+
+  <div class="form">
+    <div class="container">
+      <div class="register">
+        <div class="register__image">
+          <div class="register__image-img">
+            <img src="./assets/img/banner-register.jpg">
+          </div>
+        </div>
+        <div class="register__form">
+          <div class="register__form-title">
+            <h1>Login Up</h1>
+          </div>
+          <div class="register__form-btn">
+            <div class="btn__input">
+              <div class="btn__input-title"><label for="email">Email</label></div>
+              <div class="btn__input-box">
+                <input type="text" placeholder="Email" class="input" id="email">
+                <ion-icon name="mail-outline"></ion-icon>
+                <ion-icon name="checkmark-outline" class="success"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
+              </div>
+              <div class="error emailfail"></div>
+            </div>
+            <div class="btn__input">
+              <div class="btn__input-title"><label for="username">Username</label></div>
+              <div class="btn__input-box">
+                <input type="text" placeholder="Username" class="input" id="username">
+                <ion-icon name="person-outline"></ion-icon>
+                <ion-icon name="checkmark-outline" class="success"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
+              </div>
+              <div class="error usernamefail"></div>
+            </div>
+            <div class="btn__input">
+              <div class="btn__input-title"><label for="password">Password</label></div>
+              <div class="btn__input-box">
+                <input type="password" placeholder="Password" class="input password1" id="password">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-icon name="checkmark-outline" class="success"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
+              </div>
+              <div class="error"></div>
+            </div>
+            <div class="btn__input">
+              <div class="btn__input-title"><label for="password">Password</label></div>
+              <div class="btn__input-box">
+                <input type="password" placeholder="Enter Password" class="input password2" id="password">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <ion-icon name="checkmark-outline" class="success"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
+              </div>
+              <div class="error passwordfail"></div>
+            </div>
+          </div>
+          <div class="accept">
+            <label for="check">
+              <input type="checkbox" id="check">
+              <ion-icon name="checkmark-outline"></ion-icon>
+            </label>
+            <p>I accept the <a href="#">Terms</a> & <a href="#">Conditions</a></p>
+            <span class="confirm">Please confirm</span>
+          </div>
+          <div class="submit">
+            <button id="submit" onclick="register()">Sign Up</button>
+          </div>
+          <div class="continue">
+            <p>Or continue with your social profile</p>
+          </div>
+          <div class="login">
+            <div class="login__icons">
+              <div class="login__icons-box flex-center">
+                <ion-icon name="logo-facebook"></ion-icon>
+                <span>Facebook</span>
+              </div>
+              <div class="login__icons-box flex-center">
+                <ion-icon name="logo-google"></ion-icon>
+                <span>Google</span>
+              </div>
+            </div>
+            <div class="login__signin">
+              <p>Alrealy a member? <a href="login.html">Login</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./js/register.js"></script>
+
+</body>
+
+</html>
